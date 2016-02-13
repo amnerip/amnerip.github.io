@@ -4,24 +4,35 @@
   <title>{{ page.title }}</title>
 
   <!-- Bootstrap, pretty things... -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/yeti/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
 
 </head>
-<body class="container">
-    <nav>
+
+<body>
+<div class="header">
+    <div class="container-fluid">
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/blog">Blog</a></li>
+            <li class="inline"><a href="/">Home</a> |</li> 
+            <li class="inline"> <a href="/blog">Blog</a> |</li>
+            <li class="inline"> <a href="/classes">Classes</a></li>
         </ul>
-    </nav>
+    </div>
+</div> <!-- ./header -->
 
-    {{ content }}
+{{ content }}
 
-	<footer>
-		<ul>
-			<li><a href="mailto:neri.ana.1431@gmail.com">email</a></li>
-			<li><a href="https://github.com/amnerip">github.com/amnerip</a></li>
-		</ul>
-	</footer>
+<div class="footer">
+    <div class="container-fluid footer-content">
+        <ul>
+            <li class="inline">
+                <a href="mailto:neri.ana.1431@gmail.com">email</a> |</li>
+            <li class="inline">
+                <a href="https://github.com/amnerip">github</a></li>
+        </ul>
+    </div>
+</div> <!-- ./footer -->
 </body>
+
 </html>
