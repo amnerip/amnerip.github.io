@@ -1,19 +1,49 @@
 html {
     position: relative;
-    min-height: 100%;
+    height: 100%;
 }
 
 body {
-    margin-bottom: 35px;
+    padding-bottom: 75px;
+    height: 100%;
+}
+
+.color-one {  /* white */
+  color: #FAFFFD;
+}
+
+.color-two { /* purple */
+  color: #3D212D;
+}
+
+.color-three { /* bluish gray */
+  color: #575B67;
+}
+
+.color-four { /* dark gray */
+  color: #363A39;
+}
+
+.color-five { /* black */
+  color: #090909;
+}
+
+a:visited, a:link, a:active {
+  color: #CCCCCC;
+}
+
+a:hover {
+  color: #090909;
+  text-decoration: none;
 }
 
 .footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
     height: 30px;
     overflow: hidden;
-    margin-bottom: 5px;
+    padding-bottom: 5px;
 }
 
 .footer-content {
@@ -21,7 +51,7 @@ body {
 }
 
 .header {
-    margin-top: 10px;
+    padding-top: 10px;
     text-align: center;
 }
 
