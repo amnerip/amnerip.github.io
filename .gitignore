@@ -3,4 +3,7 @@ _site/
 .jekyll-metadata
 
 .logs/
+*.log
 notes.txt
+*todo*
+stop-dev.sh

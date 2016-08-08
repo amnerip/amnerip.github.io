@@ -1,2 +1,0 @@
-- fix footer css
-- fix main container height
