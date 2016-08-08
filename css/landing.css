@@ -10,6 +10,7 @@
     padding-left: 4vw;
     width: 50%
 }
+
 .inner-right {
     display: table-cell;
     vertical-align: middle;
@@ -17,11 +18,14 @@
     padding-right: 4vw;
     width: 50%
 }
+
 .hidden {
   display: none;
 }
 
 #entersite {
   color: black;
+  font-size: 5em;
+  text-decoration: none;
 }
 

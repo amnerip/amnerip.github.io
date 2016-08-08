@@ -4,9 +4,10 @@
   <title>{{ page.title }}</title>
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" type="text/css" href="/css/main.css">
-  {% for css in page.extra_css %}
-    <link rel="stylesheet" type="text/css" href="{{ css }}">
+  <link rel="stylesheet" type="text/css" href="/css/base.css">
+  <link rel="stylesheet" type="text/css"
+                         href="https://fonts.googleapis.com/css?family=Open+Sans">
+  {% for css in page.extra_css %} <link rel="stylesheet" type="text/css" href="{{ css }}">
   {% endfor %}
 
   {% for js in page.extra_js %}
