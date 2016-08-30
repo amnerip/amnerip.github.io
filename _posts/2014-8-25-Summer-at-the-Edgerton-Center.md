@@ -2,6 +2,7 @@
 layout: post
 title: "Summer at the Edgerton Center"
 date: 2014-8-25
+extra_css: /css/post.css
 ---
 
 During the 2014 summer I worked at the Edgerton Center. The center was started
@@ -49,8 +50,8 @@ clothing or apparel. This summer included a new two-week program that
 meant making an [underwater glider]({% post_url 2014-8-12-Seaglide %}).
 
 <div>
-<img src="{{ site.url }}/assets/final-traffic-light.jpg" alt="Final traffic light" style="width: 25vw; padding: 6vw;"/>
-<img src="{{ site.url }}/assets/glass-blowing-mine.jpg" alt="Glass blowing result" style="width: 25vw; padding: 6vw;"/>
+<img src="{{ site.url }}/assets/final-traffic-light.jpg" alt="Final traffic light" style="width: 25vw; padding-left: 6vw; padding-right: 6vw;"/>
+<img src="{{ site.url }}/assets/glass-blowing-mine.jpg" alt="Glass blowing result" style="width: 25vw; padding-left: 6vw; padding-right: 6vw;"/>
 <h5><em>Above: (Left) Final result of the Traffic Light activity. Students
 learn about parallel and series circuits and capacitors. They make the circuit
 on a breadboard and then transfer and solder unto the PCB. (Right) Students

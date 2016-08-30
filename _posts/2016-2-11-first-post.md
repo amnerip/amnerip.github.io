@@ -2,6 +2,7 @@
 layout: post
 title: "First Post"
 date: 2016-02-11
+extra_css: /css/post.css
 ---
 
 As an act of anxious procastination, I decided to set up the bare bones of a

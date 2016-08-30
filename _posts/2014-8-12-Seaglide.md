@@ -2,6 +2,7 @@
 layout: post
 title: "Seaglide"
 date: 2014-8-12
+extra_css: /css/post.css
 ---
 
 As a part of my summer at Edgerton, I also occasionally helped with the two-week
