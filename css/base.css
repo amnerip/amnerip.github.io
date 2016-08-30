@@ -46,8 +46,8 @@ a.body-link:hover {
   text-decoration: underline;
 }
 
-a:visited, a:link, a:active {
-  color: #CCCCCC;
+a:visited, a:link {
+  color: #090909;
 }
 
 a:hover {
@@ -64,13 +64,8 @@ a:hover {
     padding-bottom: 5px;
 }
 
-.footer-content {
-    text-align: center;
-}
-
 .header {
     padding-top: 10px;
-    text-align: center;
 }
 
 .inline {
@@ -79,6 +74,7 @@ a:hover {
 
 .no-list {
   list-style-type: none;
+  -webkit-padding-start: 0px;
 }
 
 .header {
@@ -88,4 +84,8 @@ a:hover {
 .container {
   margin-left: 8vw;
   margin-right: 8vw; 
+}
+
+.center {
+  text-align: center;
 }
