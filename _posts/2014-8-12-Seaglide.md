@@ -25,12 +25,12 @@ Next, I soldered the circuitry unto the protoboard and the Arduino Pro mini and 
 
 <div class="center">
 <img src="{{ site.url }}/assets/seaglide/breadboard_arduino.jpg" style="width: 25vw;">
-<h6><em> Protoboard and Arduino</em></h6>
+<h5><em> Protoboard and Arduino</em></h5>
 </div>
 
 <div class="center">
 <img src="{{ site.url }}/assets/seaglide/pump.jpg" style="width: 25vw;">
-<h6><em>Syringe system </em></h6>
+<h5><em>Syringe system </em></h5>
 </div>
 
 The backing of the 100cc syringe was replaced by copper plated bb gun pellets in
@@ -45,17 +45,17 @@ switch to turn the glider on and off.
 <div class="center">
 <img src="{{ site.url }}/assets/seaglide/insides.jpg" style="width: 25vw;">
 
-<h6><em>
+<h5><em>
 Above can be seen the internal parts.  
-</em></h6>
+</em></h5>
 </div>
 
 <div class="center">
 <img src="{{ site.url }}/assets/seaglide/final-glider.jpg" style="width: 25vw;">
 
-<h6><em>
+<h5><em>
 The glider at its completion.
-</em></h6>
+</em></h5>
 </div>
 
 The final glider can be seen above. In fact, the students under the Seaglide
