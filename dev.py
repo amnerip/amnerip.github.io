@@ -22,6 +22,7 @@ MD_POSTS_HEADER = """\
 layout: post
 title: "{spaces_title}"
 date: {year}-{month}-{day}
+extra_css: /css/post.css
 ---
 """
 
@@ -29,6 +30,24 @@ date: {year}-{month}-{day}
 def setup_args():
     parser = argparse.ArgumentParser(
         "Development environment for blog; automates various actions")
+    parser.set_defaults(func=main)
+
+    # General settings
+    server_group = parser.add_mutually_exclusive_group()
+    server_group.add_argument(
+        "--run-server",
+        dest="start",
+        action="store_true",
+        help="Start the jekyll server"
+    )
+
+    server_group.add_argument(
+        "--stop-server",
+        dest="stop",
+        action="store_true",
+        help="Stop jekyll server"
+    )
+
 
     subparsers = parser.add_subparsers(
         help="different actions you can work on.")
@@ -110,7 +129,20 @@ def posts(args):
         path = titles_to_paths[args.title]
         print("Editing post {path}".format(**locals()))
         call([EDITOR, path])
+    elif args.title:
+        # TODO: print information about the post
+        pass
 
+def main(args):
+    if args.start:
+        try:
+            os.kill(pid, 0)
+        except Exception as e:
+            print(e)
+
+        print("start")
+    elif args.stop:
+        print("stop")
 
 if __name__ == '__main__':
     args = setup_args().parse_args()
