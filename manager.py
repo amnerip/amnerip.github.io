@@ -41,14 +41,14 @@ def setup_args():
     # General settings
     server_group = parser.add_mutually_exclusive_group()
     server_group.add_argument(
-        "--run-server",
+        "-r",
         dest="start",
         action="store_true",
         help="Start the jekyll server"
     )
 
     server_group.add_argument(
-        "--stop-server",
+        "-k",
         dest="stop",
         action="store_true",
         help="Stop jekyll server"
@@ -142,8 +142,8 @@ def main(args):
         if ret == 0:
             print("Server is already running.")
         else:
-            subprocess.call(
-                "jekyll serve --detach".split(),
+            subprocess.Popen(
+                "jekyll serve &".split(),
                 stderr=subprocess.STDOUT,
                 stdout=open(LOG, 'w'))
             print(KILL_MESSAGE)
