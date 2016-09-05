@@ -4,6 +4,7 @@
 import argparse
 from datetime import date, datetime
 import glob
+import subprocess
 import sys
 import os
 from subprocess import call
@@ -25,12 +26,17 @@ date: {year}-{month}-{day}
 extra_css: /css/post.css
 ---
 """
-
+LOG = "localhost-output.log"
+KILL_MESSAGE = """\
+Server started. Run './manager.py --stop-server' to stop it."""
 
 def setup_args():
     parser = argparse.ArgumentParser(
         "Development environment for blog; automates various actions")
     parser.set_defaults(func=main)
+
+    subparsers = parser.add_subparsers(
+        help="different actions you can work on.")
 
     # General settings
     server_group = parser.add_mutually_exclusive_group()
@@ -47,10 +53,6 @@ def setup_args():
         action="store_true",
         help="Stop jekyll server"
     )
-
-
-    subparsers = parser.add_subparsers(
-        help="different actions you can work on.")
 
     # Manage blog posts
     post_parser = subparsers.add_parser(
@@ -135,16 +137,24 @@ def posts(args):
 
 def main(args):
     if args.start:
-        try:
-            os.kill(pid, 0)
-        except Exception as e:
-            print(e)
-
-        print("start")
+        find_jekyll = "pkill -0 -f jekyll"
+        ret = subprocess.call(find_jekyll.split())
+        if ret == 0:
+            print("Server is already running.")
+        else:
+            subprocess.call(
+                "jekyll serve --detach".split(),
+                stderr=subprocess.STDOUT,
+                stdout=open(LOG, 'w'))
+            print(KILL_MESSAGE)
     elif args.stop:
-        print("stop")
+        ret = subprocess.call("pkill -f jekyll".split())
+        if ret == 0:
+            print("Server killed.")
+        else:
+            print("Nothing was found to stop")
+    pass
 
 if __name__ == '__main__':
     args = setup_args().parse_args()
-    print(args)
     args.func(args)
