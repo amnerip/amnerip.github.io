@@ -6,18 +6,15 @@ extra_css: /css/post.css
 ---
 *This is a reference post for the setings on my computer*
 
-I once found myself looking at menus with fonts that rendered horribly. This is
-most of what I found to fix it on my laptop. The most important setting is
-probs the anti-aliasing and hinting. Here is a [magazine article](https://www.smashingmagazine.com/2009/11/the-ails-of-typographic-anti-aliasing/)
-that I found
-fairly straight forward
+I once found myself looking at menus with fonts that rendered horribly. Here I note
+most of what I found to fix this on my laptop. The most important setting is
+probs the anti-aliasing and hinting.
 
 Figure out your own screen's dpi and replace it with the number below. The way I did
 it is by using the `xorg-xdpyinfo` package and running `xdpyinfo | grep dots`.
-The output will tell you the dots per inch of the screen.
 
 The following goes into the `~/.Xresources` file. You also have to make sure
-you run `xrdb -merge ~/.Xresoureces` for the changes to apply. I personally
+you run `xrdb -merge ~/.Xresources` for the changes to apply. I personally
 have it in my `~/.xinitrc` file, but you do you.
 
 {% highlight bash %}
