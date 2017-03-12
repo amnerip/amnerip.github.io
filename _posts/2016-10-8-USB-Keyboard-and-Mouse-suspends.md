@@ -6,12 +6,12 @@ extra_css: /css/post.css
 ---
 
 I bought a new mouse and keyboard recently. After rebooting my laptop, I found
-that my mouse and keyboard would take some time to respond. The time between a
-click or movement of the mouse would involve some time for my laptop to
+that my mouse and keyboard had significant lag. A click or movement of the mouse
+would take noticeable time for my laptop to
 respond. After some googling, I found that my laptop was enabling power
 management options for USB connected devices. This
-[article](https://wiki.archlinux.org/index.php/Power_management) is useful to
-browse over. Specifically, the
+[arch linux wiki page](https://wiki.archlinux.org/index.php/Power_management) is useful for more details.
+Specifically, the
 [tool](https://wiki.archlinux.org/index.php/Laptop_Mode_Tools) that I
 have setup is Laptop Mode Tools. I wasn't aware of the default options for USB
 devices, which was an autosuspend after 2 seconds:
@@ -35,7 +35,7 @@ AUTOSUSPEND_TIMEOUT=2
 
 The above was found in the configuration file
 `/etc/laptop-mode/conf.d/runtime-pm.conf`. My laptop for most of the time is
-plugging into AC, so I switched to the opt-int whitelisting option. This
+plugged into AC, so I switched to the opt-int whitelisting option. This
 removed the issue that I was having with my
 devices.
 
