@@ -90,9 +90,14 @@ a:hover {
 
 .container {
   margin-left: 8vw;
-  margin-right: 8vw; 
+  margin-right: 8vw;
 }
 
 .center {
   text-align: center;
+}
+
+.nav-title {
+	font-family: 'VT323', monospace;
+	font-size: 20px;
 }
