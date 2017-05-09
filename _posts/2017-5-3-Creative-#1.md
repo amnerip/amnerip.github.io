@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: sketch
 title: "Creative #1"
 date: 2017-5-3
 extra_css: [/css/post.css, /css/processing.css]
