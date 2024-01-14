@@ -27,8 +27,8 @@ extra_css: /css/post.css
 ---
 """
 LOG = "localhost-output.log"
-KILL_MESSAGE = """\
-Server started. Run './manager.py --stop-server' to stop it."""
+KILL_MESSAGE = f"""\
+Server started. Run './manager.py --stop-server' to stop it. {LOG} for server logs."""
 
 def setup_args():
     parser = argparse.ArgumentParser(
@@ -142,14 +142,11 @@ def main(args):
         if ret == 0:
             print("Server is already running.")
         else:
-            p = subprocess.Popen(
+            subprocess.Popen(
                 "jekyll serve &".split(),
                 stderr=subprocess.STDOUT,
                 stdout=open(LOG, 'w'))
-            if p.returncode != 0:
-                print(f"Error when starting server. See {LOG} for details.")
-            else:
-                print(KILL_MESSAGE)
+            print(KILL_MESSAGE)
     elif args.stop:
         ret = subprocess.call("pkill -f jekyll".split())
         if ret == 0:
