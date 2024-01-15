@@ -23,7 +23,6 @@ MD_POSTS_HEADER = """\
 layout: post
 title: "{spaces_title}"
 date: {year}-{month}-{day}
-extra_css: /css/post.css
 ---
 """
 LOG = "localhost-output.log"
