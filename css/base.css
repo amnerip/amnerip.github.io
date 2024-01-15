@@ -1,6 +1,7 @@
 html {
     position: relative;
     height: 100%;
+    color-scheme: dark !important;
 }
 
 body {
@@ -19,9 +20,9 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 }
 
 blockquote {
-  background: #f9f9f9;
+  background: rgb(27, 30, 31);
   margin: 0px;
-  border-left: 5px solid #ccc;
+  border-left: 5px solid rgb(62, 68, 70);
   padding: 10px 20px;
 }
 
@@ -41,12 +42,12 @@ blockquote {
   color: #363A39;
 }
 
-.color-five { /* black */
-  color: #090909;
+.color-five { /* white */
+  color: rgb(226, 224, 220);
 }
 
 a.body-link:visited , a.body-link:link , a.body-link:active {
-  color: #090909;
+  color: rgb(226, 224, 220);
 }
 
 a.body-link:hover {
@@ -54,11 +55,11 @@ a.body-link:hover {
 }
 
 a:visited, a:link {
-  color: #090909;
+  color: rgb(226, 224, 220);
 }
 
 a:hover {
-  color: #090909;
+  color: rgb(226, 224, 220);
   text-decoration: none;
 }
 
