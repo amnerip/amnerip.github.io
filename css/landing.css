@@ -4,6 +4,14 @@
     display: table;
 }
 
+.inner-center {
+    vertical-align: middle;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
 .inner-left {
     display: table-cell;
     vertical-align: middle;
